@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #e6e6e6;
+  --foreground: #1f1f1f;
+  --primary: #EF7D00;
+  --secondary:  #868A90;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Poppins;
+}
