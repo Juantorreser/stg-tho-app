@@ -1,3 +1,3 @@
 export default function DashboardHome() {
-  return <></>;
+  return <>MAIN DASHBOARD</>;
 }
