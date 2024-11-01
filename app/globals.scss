@@ -5,12 +5,49 @@
 :root {
   --background: #e6e6e6;
   --foreground: #1f1f1f;
-  --primary: #EF7D00;
-  --secondary:  #868A90;
+  --primary: #ef7d00;
+  --secondary: #868a90;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Poppins;
+}
+
+//Default button style
+.btn {
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 3px;
+
+  //btn Variants
+  &.btn-primary {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  &.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--foreground);
+  }
+}
+
+//LOGIN SECTION
+#login {
+  .gradient-bg {
+    background: linear-gradient(0, #f3a858 10%, #ef7d00 95%);
+  }
+
+  #loginCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    min-height: 220px;
+    min-width: 250px;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
 }
