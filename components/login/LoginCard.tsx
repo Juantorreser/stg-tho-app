@@ -2,7 +2,7 @@
 import Image from "next/image";
 import {useRouter} from "next/navigation";
 
-export default function LoginCard() {
+const LoginCard = () => {
   const router = useRouter();
   const handleLogin = () => {
     router.push("/dashboard");
@@ -21,4 +21,6 @@ export default function LoginCard() {
       </div>
     </div>
   );
-}
+};
+
+export default LoginCard;

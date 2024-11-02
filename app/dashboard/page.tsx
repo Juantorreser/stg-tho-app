@@ -1,3 +1,5 @@
-export default function DashboardHome() {
+const DashboardHome = () => {
   return <>MAIN DASHBOARD</>;
-}
+};
+
+export default DashboardHome;

@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import {useState} from "react";
 
-export default function DashboardLayout({children}: {children: React.ReactNode}) {
+const DashboardLayout = ({children}: {children: React.ReactNode}) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const toogleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -18,4 +18,6 @@ export default function DashboardLayout({children}: {children: React.ReactNode})
       </main>
     </section>
   );
-}
+};
+
+export default DashboardLayout;

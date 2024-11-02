@@ -33,6 +33,12 @@ body {
   }
 }
 
+.divider{
+  width: 85%;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
 //HEADER
 #header {
   width: 100%;
