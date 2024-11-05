@@ -117,6 +117,7 @@ body {
   width: 100%;
   main {
     flex-grow: 1;
+    width: 75%;
     max-width: 100%;
     transition: margin-left 1s;
   }
@@ -132,7 +133,7 @@ body {
     overflow: hidden;
   }
 
-  #areas {
+  #areas {  
     width: 85%;
 
     .sidebarCollapsible {
@@ -248,6 +249,9 @@ body {
 
   #zone2Wrapper {
     padding: 20px 0;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
 
     .sectionTitle {
       margin-bottom: 10px;
@@ -309,6 +313,73 @@ body {
           font-size: 0.875rem;
           color: #ddd;
           margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  #zone3Wrapper {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    .cardContainer {
+      display: flex;
+      overflow-x: auto;
+      gap: 8px; // Smaller gap for smaller cards
+      padding-bottom: 10px;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+    }
+
+    .zone3Card {
+      position: relative;
+      width: 150px; // Smaller width for the card
+      height: 200px; // Smaller height for the card
+      flex: 0 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #333;
+      color: white;
+      text-align: center;
+
+      .cardImage {
+        object-fit: cover;
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px; // Smaller padding
+        background: rgba(0, 0, 0, 0.6); // Semi-transparent black background
+        color: white;
+        text-align: left;
+
+        .cardTitle {
+          font-size: 0.875rem; // Smaller title font size
+          font-weight: 500;
+          margin: 0;
+        }
+
+        .cardDate,
+        .cardTime {
+          font-size: 0.75rem; // Smaller font size for date and time
+          color: #ddd;
+          margin-top: 1px;
         }
       }
     }

@@ -15,8 +15,8 @@ const Sidebar: React.FC<SidebarProps> = ({menuOpen, toogleMenu}) => {
     <>
       <aside
         id="sidebar"
-        className={`h-svh p-0 absolute left-0 lg:relative bg-foreground z-[10] flex flex-col items-center justify-start
-      ${menuOpen ? "w-[70%] lg:w-[20%]" : "collapsed"}`}>
+        className={`min-h-svh p-0 absolute left-0 lg:relative bg-foreground z-[10] flex flex-col items-center justify-start
+      ${menuOpen ? "w-[70%] lg:w-[25%]" : "collapsed"}`}>
         <div className="flex py-[10px] items-center justify-center text-white relative w-full">
           <Link href={"/dashboard"}>
             <Image

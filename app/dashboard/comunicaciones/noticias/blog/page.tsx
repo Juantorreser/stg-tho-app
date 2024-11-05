@@ -8,7 +8,8 @@ const BlogPage = () => {
     <section id="blog">
       <Zone1Wrapper />
       <Zone2Wrapper />
-      <Zone3Wrapper />
+      <Zone3Wrapper month="Octubre" />
+      <Zone3Wrapper month="Septiembre" />
     </section>
   );
 };

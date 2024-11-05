@@ -12,7 +12,7 @@ const DashboardLayout = ({children}: {children: React.ReactNode}) => {
   return (
     <section id="dashboard">
       <Sidebar menuOpen={menuOpen} toogleMenu={toogleMenu} />
-      <main>
+      <main className="flex-grow">
         <Header toogleMenu={toogleMenu} menuOpen={menuOpen} />
         {children}
       </main>
