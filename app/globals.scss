@@ -75,6 +75,17 @@ body {
         display: flex;
         gap: 5px;
       }
+      .icon {
+        align-items: center;
+        justify-content: center;
+        color: var(--background);
+        cursor: pointer;
+        height: 40px;
+        padding: 0;
+        background-color: #e6e6e635;
+        border-radius: 50%;
+        width: 40px;
+      }
     }
   }
 }

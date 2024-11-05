@@ -4,6 +4,7 @@ import Image from "next/image";
 import {faChevronDown} from "@fortawesome/free-solid-svg-icons/faChevronDown";
 import HeaderSelect from "./HeaderSelect";
 import {grupos, entidades} from "@/lib/constants/constants";
+import {useState} from "react";
 
 type HeaderProps = {
   menuOpen: boolean;
@@ -11,6 +12,8 @@ type HeaderProps = {
 };
 
 const Header: React.FC<HeaderProps> = ({toogleMenu, menuOpen}) => {
+  const [openSelect, setOpenSelect] = useState<boolean>(false);
+
   return (
     <nav id="header">
       <div
@@ -20,10 +23,27 @@ const Header: React.FC<HeaderProps> = ({toogleMenu, menuOpen}) => {
       </div>
       <ul>
         <li>
-          <HeaderSelect selectOptions={grupos} />
-        </li>
-        <li>
-          <HeaderSelect selectOptions={entidades} />
+          <div className={`grid md:hidden icon relative`}>
+            <FontAwesomeIcon
+              className={`${openSelect ? "rotate-[-180deg]" : " "}
+            transition-all`}
+              icon={faChevronDown}
+              width={25}
+              onClick={() => setOpenSelect(!openSelect)}
+            />
+
+            <div
+              className={`absolute top-[50px] left-[-10px] bg-primary px-5 py-3 gap-2  justify-center items-center
+              ${openSelect ? "flex flex-col" : "hidden"}`}>
+              <HeaderSelect selectOptions={grupos} />
+              <HeaderSelect selectOptions={entidades} />
+            </div>
+          </div>
+
+          <div className="hidden md:flex gap-[15px]">
+            <HeaderSelect selectOptions={grupos} />
+            <HeaderSelect selectOptions={entidades} />
+          </div>
         </li>
         <li className="icon">
           <FontAwesomeIcon icon={faBell} width={25} />
