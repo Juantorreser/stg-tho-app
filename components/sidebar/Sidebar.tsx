@@ -2,8 +2,7 @@
 import {faX} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import AreaSelect from "./sidebar/AreaSelect";
-import Module from "./sidebar/Module";
+import Module from "./Module";
 type SidebarProps = {
   menuOpen: boolean;
   toogleMenu: () => void;
@@ -29,9 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({menuOpen, toogleMenu}) => {
 
         <div className="divider"></div>
 
-        <div id="areaSelect">
-          <AreaSelect />
-        </div>
+        <div id="areas"></div>
 
         <div className="divider"></div>
 

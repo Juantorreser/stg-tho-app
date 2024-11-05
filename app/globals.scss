@@ -33,7 +33,7 @@ body {
   }
 }
 
-.divider{
+.divider {
   width: 85%;
   height: 2px;
   background-color: var(--secondary);
@@ -112,10 +112,18 @@ body {
   //SIDEBAR
   #sidebar {
     transition: width 0.5s ease-in-out;
-  }
 
-  #sidebar.collapsed {
-    width: 0;
-    overflow: hidden;
+    &.collapsed {
+      width: 0;
+      overflow: hidden;
+    }
+
+    .sidebarICollapsible {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: #e6e6e650 1px solid;
+      color: var(--background);
+    }
   }
 }

@@ -2,6 +2,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBell, faCog, faEnvelope, faBars, faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import {faChevronDown} from "@fortawesome/free-solid-svg-icons/faChevronDown";
+import HeaderSelect from "./HeaderSelect";
+import {grupos, entidades} from "@/lib/constants/constants";
 
 type HeaderProps = {
   menuOpen: boolean;
@@ -17,6 +19,12 @@ const Header: React.FC<HeaderProps> = ({toogleMenu, menuOpen}) => {
         <FontAwesomeIcon icon={menuOpen ? faChevronLeft : faBars} width={25} />
       </div>
       <ul>
+        <li>
+          <HeaderSelect selectOptions={grupos} />
+        </li>
+        <li>
+          <HeaderSelect selectOptions={entidades} />
+        </li>
         <li className="icon">
           <FontAwesomeIcon icon={faBell} width={25} />
         </li>
