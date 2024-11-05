@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import Zone1Wrapper from "@/components/blog/Zone1Wrapper";
+import Zone2Wrapper from "@/components/blog/Zone2Wrapper";
+import Zone3Wrapper from "@/components/blog/Zone3Wrapper";
 
 const BlogPage = () => {
   return (
-    <div>Blog</div>
-  )
-}
+    <section id="blog">
+      <Zone1Wrapper />
+      <Zone2Wrapper />
+      <Zone3Wrapper />
+    </section>
+  );
+};
 
 export default BlogPage;
