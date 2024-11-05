@@ -37,6 +37,7 @@ body {
   width: 85%;
   height: 2px;
   background-color: var(--secondary);
+  margin-bottom: 10px;
 }
 
 //HEADER
@@ -118,12 +119,18 @@ body {
       overflow: hidden;
     }
 
-    .sidebarICollapsible {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: #e6e6e650 1px solid;
-      color: var(--background);
+    #areas {
+      width: 85%;
+
+      .sidebarCollapsible {
+        display: flex;
+        margin: 5px 0;
+        padding: 0;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--background);
+        width: 100%;
+      }
     }
   }
 }
